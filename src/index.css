@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #07080f;
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-strong: rgba(255, 255, 255, 0.07);
+  --line: rgba(255, 255, 255, 0.09);
+  --text: #eef0ff;
+  --muted: #9aa0c3;
+  --blue: #5b8cff;
+  --purple: #9b6bff;
+  --green: #3ddc97;
+  --amber: #ffc857;
+  --red: #ff6b7a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Manrope', ui-sans-serif, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.ip-glow {
+  background:
+    radial-gradient(60rem 28rem at 15% -10%, rgba(91, 140, 255, 0.16), transparent 60%),
+    radial-gradient(48rem 26rem at 95% 0%, rgba(155, 107, 255, 0.14), transparent 60%),
+    var(--bg);
+}
+
+.ip-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  backdrop-filter: blur(14px);
+}
+
+.ip-inner {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.ip-btn {
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  transition: transform 0.15s ease, opacity 0.15s ease, background 0.15s ease;
+  cursor: pointer;
+}
+
+.ip-btn:active {
+  transform: scale(0.98);
+}
+
+.ip-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.ip-primary {
+  background: linear-gradient(135deg, var(--blue), var(--purple));
+  color: #fff;
+  box-shadow: 0 8px 30px rgba(91, 140, 255, 0.28);
+}
+
+.ip-ghost {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--text);
+}
+
+.ip-ghost:hover {
+  background: var(--surface-strong);
+}
+
+.ip-input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--line);
+  color: var(--text);
+  font: inherit;
+  outline: none;
+}
+
+.ip-input:focus {
+  border-color: rgba(91, 140, 255, 0.7);
+}
+
+.ip-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.ip-display {
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
