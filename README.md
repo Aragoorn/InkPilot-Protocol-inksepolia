@@ -5,7 +5,8 @@
 InkPilot helps users put USDC to work through a simple conversation, then keeps positions safer with transparent, permissionless protection logic ("Safe Mode"), withdraw-anytime controls, and verifiable onchain activity. It is designed as a consumer-friendly DeFi primitive for the Ink ecosystem: easier onboarding, clearer risk communication, and safer leverage defaults.
 
 > **Status:** Testnet / demo-ready on **Ink Sepolia (chain ID 763373)**. Not audited for mainnet, not financial advice, and not a "no-loss guarantee." Protection reduces certain liquidation risks; it does not remove smart-contract, market, oracle, bridge, or stablecoin risks.
-
+---
+website: https://inkpilot-ink-sepolia.netlify.app/
 ---
 
 ## Problem statement
