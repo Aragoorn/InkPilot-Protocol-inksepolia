@@ -1,0 +1,9 @@
+# Netlify deploys only the Vite frontend. Contracts are built and deployed
+# separately with Foundry (`bun run contracts:build`, `./deploy.sh deploy`);
+# the frontend uses the pre-generated ABI in src/abi/pilot.ts, so `forge`
+# is not needed (and not available) on Netlify's build image.
+# `npm ci` makes sure the locked Vite and its plugins are installed even when
+# the build runs without a prior dependency install step.
+[build]
+  command = "npm ci --include=dev && npx vite build"
+  publish = "dist"
